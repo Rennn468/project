@@ -24,3 +24,19 @@ except pygame.error as e:
     print(f"Error loading images: {e}")
     pygame.quit()
     sys.exit()
+
+# load music
+pygame.mixer.music.load('music.mp3')
+# Setting the volume ( 0.0 - 1.0)
+pygame.mixer.music.set_volume(0.5)
+
+# Start music
+pygame.mixer.music.play(-1)
+
+# Player settings
+player_width = 195
+player_height = 109
+player_x = screen_width // 2 - player_width // 2
+player_y = screen_height - player_height - 10
+player_speed = 5
+player_health = 3
